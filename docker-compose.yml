@@ -170,12 +170,12 @@ services:
 
   clickhouse-exporter:
     container_name: GISIT_clickhouse-exporter
-    image: altinity/clickhouse-exporter
+    build:
+      context: "./exporters/clickhouse_exporter"
+      dockerfile: Dockerfile
     environment:
       - CLICKHOUSE_USER=${CLICKHOUSE_USER}
       - CLICKHOUSE_PASSWORD=${CLICKHOUSE_PASSWORD}
-      - CLICKHOUSE_URL=http://clickhouse:8123
-
 
   prometheus:
     image: prom/prometheus:latest
