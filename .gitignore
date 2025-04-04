@@ -1,0 +1,8 @@
+config/backend/.env
+.idea/
+.vscode/
+.env
+src/*
+!src/.gitkeep
+cert/*
+!cert/.gitkeep
