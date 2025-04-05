@@ -168,15 +168,6 @@ services:
       CLICKHOUSE_USER: ${CLICKHOUSE_USER}
       CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD}
 
-  clickhouse-exporter:
-    container_name: GISIT_clickhouse-exporter
-    build:
-      context: "./exporters/clickhouse_exporter"
-      dockerfile: Dockerfile
-    environment:
-      - CLICKHOUSE_USER=${CLICKHOUSE_USER}
-      - CLICKHOUSE_PASSWORD=${CLICKHOUSE_PASSWORD}
-
   prometheus:
     image: prom/prometheus:latest
     container_name: GISIT_prometheus

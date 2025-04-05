@@ -18,9 +18,9 @@ scrape_configs:
     static_configs:
       - targets: ['redis-exporter:9121']
 
-  - job_name: 'clickhouse-exporter'
+  - job_name: 'clickhouse'
     static_configs:
-      - targets: ['clickhouse-exporter:9116']
+      - targets: ['clickhouse:9000']
 
   - job_name: 'scylla'
     static_configs:
