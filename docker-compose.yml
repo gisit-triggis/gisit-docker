@@ -79,6 +79,8 @@ services:
       - GRPC_PORT=9090
       - HTTP_PORT=8080
       - REDIS_REALTIME_HOST=redis
+      - AUTH_SERVICE_ADDR=backend:9090
+      - POSITION_SERVICE_ADDR=backend:9090
     depends_on:
       - scylla
 
