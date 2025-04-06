@@ -80,7 +80,7 @@ services:
       - HTTP_PORT=8080
       - REDIS_REALTIME_HOST=redis:6379
       - AUTH_SERVICE_ADDR=backend:9090
-      - POSITION_SERVICE_ADDR=backend:9090
+      - POSITION_SERVICE_ADDR=realtime-backend:9090
     depends_on:
       - scylla
 
